@@ -1,7 +1,7 @@
 # Portfolio — Emna Brahmi
 
 Site personnel statique (HTML, CSS, JavaScript sans framework) publié sur GitHub Pages :
-**https://emnab2.github.io**
+**https://emnab2.github.io/Portfolio/**
 
 ## Structure des fichiers
 

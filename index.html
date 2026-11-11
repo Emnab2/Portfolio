@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO de base ===== -->
+  <title>Emna Brahmi — Élève ingénieure en IA &amp; Data</title>
+  <meta name="description" content="Portfolio d'Emna Brahmi, élève ingénieure en Génie Informatique à l'ENICarthage : projets en intelligence artificielle (RAG, LLM, machine learning), data et développement. Recherche un stage de fin d'études en IA et data.">
+  <meta name="author" content="Emna Brahmi">
+  <link rel="canonical" href="https://emnab2.github.io/">
+
+  <!-- ===== Open Graph (aperçu lors d'un partage LinkedIn, WhatsApp, etc.) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://emnab2.github.io/">
+  <meta property="og:title" content="Emna Brahmi — Élève ingénieure en IA &amp; Data">
+  <meta property="og:description" content="Élève ingénieure en Génie Informatique à l'ENICarthage. Projets en IA générative, machine learning et développement.">
+  <meta property="og:image" content="https://emnab2.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Emna Brahmi — Élève ingénieure en Génie Informatique, IA et Data">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===== Favicon et couleur de la barre du navigateur mobile ===== -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+
+  <!-- ===== Thème : appliqué AVANT l'affichage pour éviter un flash de la mauvaise couleur ===== -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var theme = null;
+      try { theme = localStorage.getItem('theme'); } catch (e) { /* stockage indisponible */ }
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      root.setAttribute('data-theme', theme);
+      root.classList.add('js'); // indique au CSS que JavaScript est actif
+    })();
+  </script>
+
+  <!-- ===== Polices (Google Fonts) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Bibliothèque d'icônes SVG (réutilisées plus bas avec <use href="#i-...">) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M1.5 12H4M20 12h2.5M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <!-- Lien d'évitement : permet aux utilisateurs clavier d'aller directement au contenu -->
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- =====================================================================
+       EN-TÊTE ET NAVIGATION
+       ===================================================================== -->
+  <header class="site-header" id="haut">
+    <div class="container header-inner">
+      <a class="brand" href="#accueil" aria-label="Emna Brahmi, retour à l'accueil">
+        <span class="brand-mark" aria-hidden="true">EB</span>
+        <span class="brand-name">Emna Brahmi</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <!-- Bouton du menu mobile (visible uniquement sur petits écrans) -->
+        <button class="nav-toggle icon-btn" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#engagement">Engagement</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bouton mode clair / mode sombre -->
+      <button class="theme-toggle icon-btn" type="button" aria-label="Changer de thème">
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+
+    <!-- =====================================================================
+         ACCUEIL
+         ===================================================================== -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-main" data-reveal>
+          <p class="status"><span class="status-dot" aria-hidden="true"></span>Recherche un stage de fin d'études en IA &amp; Data</p>
+
+          <h1 class="hero-title" id="hero-title">Emna Brahmi</h1>
+
+          <p class="hero-role">
+            <span>Élève ingénieure en Génie Informatique</span>
+            <span>Intelligence Artificielle</span>
+            <span>Data</span>
+          </p>
+
+          <p class="hero-pitch">
+            Étudiante en cycle ingénieur en Génie Informatique à l'ENICarthage, passionnée par
+            l'intelligence artificielle, la data et les nouvelles technologies. Curieuse et rigoureuse,
+            j'aime relever de nouveaux défis et apprendre en continu au sein d'une équipe.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projets">
+              Voir mes projets
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-secondary" href="#contact">Me contacter</a>
+            <!-- Pointe vers cv.pdf, à la racine du site -->
+            <a class="btn btn-ghost" href="cv.pdf" download="CV-Emna-Brahmi.pdf">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              Télécharger mon CV
+              <span class="visually-hidden">(PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-aside" aria-label="En bref" data-reveal>
+          <!--
+            EMPLACEMENT PHOTO (optionnel) — pour l'activer :
+            1. placez votre photo dans assets/img/ (ex. photo.webp, format carré ou 4:5) ;
+            2. décommentez le bloc <figure> ci-dessous.
+
+          <figure class="hero-photo">
+            <img src="assets/img/photo.webp" alt="Portrait d'Emna Brahmi" width="480" height="600">
+          </figure>
+          -->
+
+          <p class="aside-label">En bref</p>
+          <dl class="facts">
+            <div>
+              <dt>Formation</dt>
+              <dd>Cycle ingénieur en Génie Informatique, ENICarthage</dd>
+            </div>
+            <div>
+              <dt>Domaines</dt>
+              <dd>IA générative (LLM, RAG), machine learning, data</dd>
+            </div>
+            <div>
+              <dt>Expérience</dt>
+              <dd>2 stages : ITGust (2026), Bee Coders (2025)</dd>
+            </div>
+            <div>
+              <dt>Langues</dt>
+              <dd>Arabe, français (B2), anglais (B2)</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         01 — PROJETS
+         Visuels de présentation remplaçables par des captures d'écran
+         (voir README.md).
+         ===================================================================== -->
+    <section class="section" id="projets" aria-labelledby="projets-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">01</p>
+          <h2 id="projets-title">Projets</h2>
+          <p class="section-intro">Une sélection de projets en intelligence artificielle, data et développement, de l'extraction de données jusqu'à l'application finale.</p>
+        </header>
+
+        <!-- ----- Projet phare 1 : LabClear ----- -->
+        <article class="project" aria-labelledby="p-labclear" data-reveal>
+          <div class="project-media">
+            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
+            <figure class="visual" aria-hidden="true">
+              <p class="visual-kicker">Pipeline</p>
+              <p class="visual-name">LabClear</p>
+              <ol class="visual-flow"><li>PDF d'analyse</li><li>Structuration</li><li>Valeurs de référence</li><li>Explications RAG</li></ol>
+            </figure>
+          </div>
+          <div class="project-body">
+            <p class="project-kicker">IA générative · RAG</p>
+            <h3 class="project-title" id="p-labclear">LabClear</h3>
+            <p class="project-lede">Assistant IA pour les analyses de sang.</p>
+
+            <ol class="pipeline" aria-label="Pipeline de LabClear">
+              <li>Extraction des résultats d'un PDF d'analyse de sang</li>
+              <li>Structuration des données</li>
+              <li>Comparaison aux valeurs de référence</li>
+              <li>Explications sourcées par RAG, validées par un professionnel de santé</li>
+            </ol>
+
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Python</li><li>pdfplumber</li><li>RAG</li><li>LLM</li><li>Flask</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="https://github.com/Emnab2/LabClear" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Voir le code sur GitHub<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ----- Projet phare 2 : DocuMind ----- -->
+        <article class="project project--reverse" aria-labelledby="p-documind" data-reveal>
+          <div class="project-media">
+            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
+            <figure class="visual" aria-hidden="true">
+              <p class="visual-kicker">Pipeline</p>
+              <p class="visual-name">DocuMind</p>
+              <ol class="visual-flow"><li>Découpage</li><li>Recherche</li><li>Génération</li></ol>
+            </figure>
+          </div>
+          <div class="project-body">
+            <p class="project-kicker">IA générative · RAG</p>
+            <h3 class="project-title" id="p-documind">DocuMind</h3>
+            <p class="project-lede">Assistant IA de questions-réponses sur documents.</p>
+
+            <ol class="pipeline" aria-label="Pipeline de DocuMind">
+              <li>Découpage des documents</li>
+              <li>Recherche des passages pertinents</li>
+              <li>Génération des réponses</li>
+            </ol>
+
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Python</li><li>RAG</li><li>LLM</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ----- Projet phare 3 : CreditWise ----- -->
+        <article class="project" aria-labelledby="p-creditwise" data-reveal>
+          <div class="project-media">
+            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
+            <figure class="visual" aria-hidden="true">
+              <p class="visual-kicker">Pipeline</p>
+              <p class="visual-name">CreditWise</p>
+              <ol class="visual-flow"><li>Données clients</li><li>Modèles ML</li><li>Explications SHAP</li></ol>
+            </figure>
+          </div>
+          <div class="project-body">
+            <p class="project-kicker">Machine learning · IA explicable · Stage ITGust</p>
+            <h3 class="project-title" id="p-creditwise">CreditWise</h3>
+            <p class="project-lede">Plateforme intelligente d'aide à la décision d'octroi de crédit, réalisée pendant mon stage chez ITGust.</p>
+            <p class="project-note">Projet de stage chez ITGust</p>
+
+            <ol class="pipeline" aria-label="Démarche de CreditWise">
+              <li>Comparaison de modèles de machine learning sur des données clients</li>
+              <li>Explication des décisions avec SHAP (IA explicable)</li>
+            </ol>
+
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Python</li><li>Scikit-learn</li><li>Pandas</li><li>SHAP</li><li>Flask</li><li>SQLite</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="https://github.com/Emnab2/CreditWise" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Voir le code sur GitHub<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ----- Autres projets (format compact) ----- -->
+        <h3 class="subhead" data-reveal>Autres projets</h3>
+        <div class="minor-projects">
+
+          <article class="minor" aria-labelledby="p-delivgo" data-reveal>
+            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
+            <figure class="visual visual--small" aria-hidden="true">
+              <p class="visual-kicker">Architecture</p>
+              <p class="visual-name">DelivGo</p>
+              <ol class="visual-flow"><li>Android</li><li>API REST</li><li>MySQL</li></ol>
+            </figure>
+            <p class="project-kicker">Mobile</p>
+            <h4 class="minor-title" id="p-delivgo">DelivGo</h4>
+            <p>Application mobile de suivi de livraisons en temps réel avec API REST, messagerie instantanée et gestion des rôles contrôleur/livreur.</p>
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Android (Java)</li><li>Spring Boot</li><li>MySQL</li><li>Retrofit</li>
+            </ul>
+            <p class="minor-link"><a class="link" href="https://github.com/Emnab2/DelivGo" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Voir le code sur GitHub<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a></p>
+          </article>
+
+          <article class="minor" aria-labelledby="p-edukini" data-reveal>
+            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
+            <figure class="visual visual--small" aria-hidden="true">
+              <p class="visual-kicker">Architecture</p>
+              <p class="visual-name">EDUKINI</p>
+              <ol class="visual-flow"><li>Angular</li><li>Spring Boot</li></ol>
+            </figure>
+            <p class="project-kicker">Web</p>
+            <h4 class="minor-title" id="p-edukini">EDUKINI</h4>
+            <p>Plateforme intelligente d'aide à l'orientation des étudiants.</p>
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Angular</li><li>Spring Boot</li>
+            </ul>
+          </article>
+
+          <article class="minor" aria-labelledby="p-smartstudy" data-reveal>
+            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
+            <figure class="visual visual--small" aria-hidden="true">
+              <p class="visual-kicker">Fonctionnalités</p>
+              <p class="visual-name">SmartStudy</p>
+              <ol class="visual-flow"><li>Flashcards</li><li>Résumés</li><li>Planning</li></ol>
+            </figure>
+            <p class="project-kicker">Application</p>
+            <h4 class="minor-title" id="p-smartstudy">SmartStudy</h4>
+            <p>Application générant flashcards, résumés et planning de révision personnalisé.</p>
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Java</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         02 — EXPÉRIENCE
+         ===================================================================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">02</p>
+          <h2 id="experience-title">Expérience</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <p class="timeline-date"><time datetime="2026-07">Juillet</time> – <time datetime="2026-08">août 2026</time></p>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Stage d'été · Data Science et développement web</h3>
+              <p class="timeline-org">ITGust <span class="sep" aria-hidden="true">—</span> Tunis</p>
+              <ul class="bullets">
+                <li>Développement de <strong>CreditWise</strong>, plateforme intelligente d'aide à la décision d'octroi de crédit (Flask, SQLite).</li>
+                <li>Comparaison de modèles de machine learning sur des données clients.</li>
+                <li>Explication des décisions avec SHAP (IA explicable).</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <p class="timeline-date"><time datetime="2025-07">Juillet 2025</time></p>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Stage d'été · Développement backend</h3>
+              <p class="timeline-org">Bee Coders <span class="sep" aria-hidden="true">—</span> Lac 1, Tunis</p>
+              <ul class="bullets">
+                <li>Co-développement du backend d'une plateforme de gestion d'intervenants à domicile.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         03 — FORMATION
+         ===================================================================== -->
+    <section class="section" id="formation" aria-labelledby="formation-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">03</p>
+          <h2 id="formation-title">Formation</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <p class="timeline-date"><time datetime="2024">2024</time> – aujourd'hui</p>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Cycle ingénieur en Génie Informatique</h3>
+              <p class="timeline-org">École Nationale d'Ingénieurs de Carthage (ENICarthage)</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <p class="timeline-date"><time datetime="2022">2022</time> – <time datetime="2024">2024</time></p>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Classes préparatoires Physique-Chimie</h3>
+              <p class="timeline-org">Institut Préparatoire aux Études d'Ingénieur d'El Manar</p>
+              <p class="timeline-note">Admise au Concours National d'Entrée aux Écoles d'Ingénieurs.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <p class="timeline-date"><time datetime="2022">2022</time></p>
+            <div class="timeline-body">
+              <h3 class="timeline-title">Baccalauréat Sciences Expérimentales</h3>
+              <p class="timeline-org">Lycée Bardo</p>
+              <p class="timeline-note">Mention Bien.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         04 — COMPÉTENCES
+         ===================================================================== -->
+    <section class="section" id="competences" aria-labelledby="competences-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">04</p>
+          <h2 id="competences-title">Compétences</h2>
+        </header>
+
+        <dl class="skills">
+          <div class="skills-row" data-reveal>
+            <dt>Machine Learning</dt>
+            <dd><ul class="tags">
+              <li>Scikit-learn</li><li>Pandas</li><li>Classification</li><li>Comparaison de modèles</li><li>SHAP (IA explicable)</li>
+            </ul></dd>
+          </div>
+          <div class="skills-row" data-reveal>
+            <dt>IA générative</dt>
+            <dd><ul class="tags">
+              <li>LLM</li><li>RAG</li><li>Recherche sémantique</li>
+            </ul></dd>
+          </div>
+          <div class="skills-row" data-reveal>
+            <dt>Langages</dt>
+            <dd><ul class="tags">
+              <li>Python</li><li>Java</li><li>C</li><li>C++</li>
+            </ul></dd>
+          </div>
+          <div class="skills-row" data-reveal>
+            <dt>Développement</dt>
+            <dd><ul class="tags">
+              <li>Flask</li><li>Angular</li><li>Node.js</li><li>Express.js</li><li>Spring Boot</li><li>HTML/CSS</li><li>Android Studio</li>
+            </ul></dd>
+          </div>
+          <div class="skills-row" data-reveal>
+            <dt>Bases de données et modélisation</dt>
+            <dd><ul class="tags">
+              <li>MySQL</li><li>SQLite</li><li>UML</li>
+            </ul></dd>
+          </div>
+          <div class="skills-row" data-reveal>
+            <dt>Cloud et réseaux</dt>
+            <dd><ul class="tags">
+              <li>AWS Cloud Foundations</li><li>Cisco (CCNA 1 et 2)</li>
+            </ul></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         05 — CERTIFICATIONS
+         ===================================================================== -->
+    <section class="section" id="certifications" aria-labelledby="certifications-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">05</p>
+          <h2 id="certifications-title">Certifications</h2>
+        </header>
+
+        <ul class="certs">
+          <li class="cert" data-reveal>
+            <p class="cert-date"><time datetime="2026-11">Novembre 2026</time></p>
+            <div class="cert-body">
+              <h3 class="cert-title">AWS Academy Graduate – Cloud Foundations</h3>
+              <p class="cert-issuer">AWS Academy</p>
+            </div>
+            <a class="link cert-link" href="https://www.credly.com/go/YoqtsXbz" target="_blank" rel="noopener noreferrer">
+              Voir le badge
+              <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              <span class="visually-hidden">(Credly, s'ouvre dans un nouvel onglet)</span>
+            </a>
+          </li>
+          <li class="cert" data-reveal>
+            <p class="cert-date"><time datetime="2026-05">Mai 2026</time></p>
+            <div class="cert-body">
+              <h3 class="cert-title">CCNA 2 : Switching, Routing and Wireless Essentials</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+          </li>
+          <li class="cert" data-reveal>
+            <p class="cert-date"><time datetime="2025-05">Mai 2025</time></p>
+            <div class="cert-body">
+              <h3 class="cert-title">CCNA 1 : Introduction to Networks</h3>
+              <p class="cert-issuer">Cisco Networking Academy</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         06 — ENGAGEMENT, LANGUES ET CENTRES D'INTÉRÊT
+         ===================================================================== -->
+    <section class="section" id="engagement" aria-labelledby="engagement-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">06</p>
+          <h2 id="engagement-title">Engagement</h2>
+        </header>
+
+        <div class="trio">
+          <div class="trio-col" data-reveal>
+            <h3 class="trio-title">Vie associative et entrepreneuriat</h3>
+            <ul class="plain-list">
+              <li><strong>Microsoft Tech Club ENICarthage</strong><span>Co-leader</span></li>
+              <li><strong>IEEE ENICarthage Student Branch</strong><span>Membre</span></li>
+              <li><strong>Statut National d'Étudiant-Entrepreneur (SNEE)</strong><span>2026</span></li>
+            </ul>
+          </div>
+          <div class="trio-col" data-reveal>
+            <h3 class="trio-title">Langues</h3>
+            <ul class="plain-list">
+              <li><strong>Arabe</strong><span>Langue maternelle</span></li>
+              <li><strong>Français</strong><span>B2</span></li>
+              <li><strong>Anglais</strong><span>B2</span></li>
+            </ul>
+          </div>
+          <div class="trio-col" data-reveal>
+            <h3 class="trio-title">Centres d'intérêt</h3>
+            <ul class="plain-list">
+              <li><strong>Lecture</strong></li>
+              <li><strong>Intelligence artificielle</strong></li>
+              <li><strong>Tennis</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         07 — CONTACT
+         (pas de formulaire : GitHub Pages ne peut pas envoyer d'e-mails)
+         ===================================================================== -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index" aria-hidden="true">07</p>
+          <h2 id="contact-title">Contact</h2>
+          <p class="section-intro">Je recherche un stage de fin d'études en intelligence artificielle et data. Écrivez-moi, je vous répondrai avec plaisir.</p>
+        </header>
+
+        <div class="contact-grid" data-reveal>
+          <div class="email-block">
+            <p class="aside-label" id="email-label">E-mail</p>
+            <a class="email" href="mailto:brahmiemna6@gmail.com" aria-describedby="email-label">brahmiemna6@gmail.com</a>
+            <div class="email-actions">
+              <button class="btn btn-primary copy-btn" type="button" data-copy="brahmiemna6@gmail.com">
+                <svg class="icon icon-copy" aria-hidden="true"><use href="#i-copy"/></svg>
+                <svg class="icon icon-check" aria-hidden="true"><use href="#i-check"/></svg>
+                <span class="copy-label">Copier l'adresse</span>
+              </button>
+              <a class="btn btn-secondary" href="mailto:brahmiemna6@gmail.com">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                Écrire un e-mail
+              </a>
+            </div>
+            <!-- Zone annoncée par les lecteurs d'écran après la copie -->
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span class="contact-key">Téléphone</span>
+              <a href="tel:+21628136049">+216 28 136 049</a>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+              <span class="contact-key">GitHub</span>
+              <a href="https://github.com/Emnab2" target="_blank" rel="noopener noreferrer">github.com/Emnab2<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              <span class="contact-key">CV</span>
+              <a href="cv.pdf" download="CV-Emna-Brahmi.pdf">Télécharger (PDF)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       PIED DE PAGE
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Emna Brahmi</p>
+      <a class="link" href="#accueil">Retour en haut</a>
+    </div>
+  </footer>
+</body>
+</html>

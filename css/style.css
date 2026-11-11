@@ -797,7 +797,6 @@ main:focus { outline: none; }
   line-height: 1.4;
 }
 .cert-issuer { margin-top: .2rem; color: var(--muted); font-size: .95rem; }
-.cert-link { white-space: nowrap; font-size: .95rem; }
 
 /* ---------- Engagement / langues / intérêts ---------- */
 .trio {

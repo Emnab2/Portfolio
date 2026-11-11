@@ -116,70 +116,66 @@
          ACCUEIL
          ===================================================================== -->
     <section class="hero" id="accueil" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-main" data-reveal>
-          <p class="status"><span class="status-dot" aria-hidden="true"></span>Recherche un stage de fin d'études en IA &amp; Data</p>
+      <div class="container">
+        <p class="status" data-reveal><span class="status-dot" aria-hidden="true"></span>Recherche un stage de fin d'études en IA &amp; Data</p>
 
-          <h1 class="hero-title" id="hero-title">Emna Brahmi</h1>
+        <!-- Nom en très grand : élément le plus visible de la page -->
+        <h1 class="hero-title" id="hero-title" data-reveal>Emna Brahmi<span class="hero-dot" aria-hidden="true">.</span></h1>
 
-          <p class="hero-role">
-            <span>Élève ingénieure en Génie Informatique</span>
-            <span>Intelligence Artificielle</span>
-            <span>Data</span>
-          </p>
+        <div class="hero-grid">
+          <div class="hero-main" data-reveal>
+            <p class="hero-role">
+              <span>Élève ingénieure en Génie Informatique</span>
+              <span>Intelligence Artificielle</span>
+              <span>Data</span>
+            </p>
 
-          <p class="hero-pitch">
-            Étudiante en cycle ingénieur en Génie Informatique à l'ENICarthage, passionnée par
-            l'intelligence artificielle, la data et les nouvelles technologies. Curieuse et rigoureuse,
-            j'aime relever de nouveaux défis et apprendre en continu au sein d'une équipe.
-          </p>
+            <!-- <mark> : mots clés surlignés à la couleur d'accent -->
+            <p class="hero-pitch">
+              Étudiante en cycle ingénieur en Génie Informatique à l'ENICarthage, passionnée par
+              <mark>l'intelligence artificielle, la data</mark> et les nouvelles technologies. Curieuse et rigoureuse,
+              j'aime relever de nouveaux défis et apprendre en continu au sein d'une équipe.
+            </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projets">
-              Voir mes projets
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="btn btn-secondary" href="#contact">Me contacter</a>
-            <!-- Pointe vers cv.pdf, à la racine du site -->
-            <a class="btn btn-ghost" href="cv.pdf" download="CV-Emna-Brahmi.pdf">
-              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
-              Télécharger mon CV
-              <span class="visually-hidden">(PDF)</span>
-            </a>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projets">
+                Voir mes projets
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+              <a class="btn btn-secondary" href="#contact">Me contacter</a>
+              <!-- Pointe vers cv.pdf, à la racine du site -->
+              <a class="btn btn-ghost" href="cv.pdf" download="CV-Emna-Brahmi.pdf">
+                <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+                Télécharger mon CV
+                <span class="visually-hidden">(PDF)</span>
+              </a>
+            </div>
           </div>
+
+          <!-- Chiffres clés (à mettre à jour si vous ajoutez projets, stages ou certifications) -->
+          <aside class="hero-stats" aria-label="En chiffres" data-reveal>
+            <!--
+              EMPLACEMENT PHOTO (optionnel) — placez la photo dans assets/img/photo.webp
+              puis décommentez :
+            <figure class="hero-photo">
+              <img src="assets/img/photo.webp" alt="Portrait d'Emna Brahmi" width="480" height="600">
+            </figure>
+            -->
+            <ul class="stats">
+              <li><a href="#projets"><strong>6</strong><span>projets IA, data et web</span></a></li>
+              <li><a href="#experience"><strong>2</strong><span>stages en entreprise</span></a></li>
+              <li><a href="#certifications"><strong>3</strong><span>certifications AWS et Cisco</span></a></li>
+            </ul>
+          </aside>
         </div>
+      </div>
 
-        <aside class="hero-aside" aria-label="En bref" data-reveal>
-          <!--
-            EMPLACEMENT PHOTO (optionnel) — pour l'activer :
-            1. placez votre photo dans assets/img/ (ex. photo.webp, format carré ou 4:5) ;
-            2. décommentez le bloc <figure> ci-dessous.
-
-          <figure class="hero-photo">
-            <img src="assets/img/photo.webp" alt="Portrait d'Emna Brahmi" width="480" height="600">
-          </figure>
-          -->
-
-          <p class="aside-label">En bref</p>
-          <dl class="facts">
-            <div>
-              <dt>Formation</dt>
-              <dd>Cycle ingénieur en Génie Informatique, ENICarthage</dd>
-            </div>
-            <div>
-              <dt>Domaines</dt>
-              <dd>IA générative (LLM, RAG), machine learning, data</dd>
-            </div>
-            <div>
-              <dt>Expérience</dt>
-              <dd>2 stages : ITGust (2026), Bee Coders (2025)</dd>
-            </div>
-            <div>
-              <dt>Langues</dt>
-              <dd>Arabe, français (B2), anglais (B2)</dd>
-            </div>
-          </dl>
-        </aside>
+      <!-- Bandeau de compétences qui défile (immobile si les animations sont réduites) -->
+      <div class="marquee" role="region" aria-label="Compétences principales">
+        <div class="marquee-track">
+          <ul class="marquee-list"><li>Python</li><li>RAG</li><li>LLM</li><li>Recherche sémantique</li><li>Scikit-learn</li><li>Pandas</li><li>SHAP</li><li>Flask</li><li>Spring Boot</li><li>Angular</li><li>Java</li><li>Android</li><li>MySQL</li><li>AWS Cloud Foundations</li><li>Cisco CCNA</li></ul>
+          <ul class="marquee-list" aria-hidden="true"><li>Python</li><li>RAG</li><li>LLM</li><li>Recherche sémantique</li><li>Scikit-learn</li><li>Pandas</li><li>SHAP</li><li>Flask</li><li>Spring Boot</li><li>Angular</li><li>Java</li><li>Android</li><li>MySQL</li><li>AWS Cloud Foundations</li><li>Cisco CCNA</li></ul>
+        </div>
       </div>
     </section>
 
@@ -199,6 +195,7 @@
         <!-- ----- Projet phare 1 : LabClear ----- -->
         <article class="project" aria-labelledby="p-labclear" data-reveal>
           <div class="project-head">
+            <span class="project-num" aria-hidden="true">01</span>
             <p class="project-kicker">IA générative · RAG</p>
             <h3 class="project-title" id="p-labclear">LabClear</h3>
           </div>
@@ -217,6 +214,7 @@
         <!-- ----- Projet phare 2 : DocuMind ----- -->
         <article class="project" aria-labelledby="p-documind" data-reveal>
           <div class="project-head">
+            <span class="project-num" aria-hidden="true">02</span>
             <p class="project-kicker">IA générative · RAG</p>
             <h3 class="project-title" id="p-documind">DocuMind</h3>
           </div>
@@ -232,6 +230,7 @@
         <!-- ----- Projet phare 3 : CreditWise ----- -->
         <article class="project" aria-labelledby="p-creditwise" data-reveal>
           <div class="project-head">
+            <span class="project-num" aria-hidden="true">03</span>
             <p class="project-kicker">Machine learning · IA explicable</p>
             <h3 class="project-title" id="p-creditwise">CreditWise</h3>
           </div>
@@ -253,6 +252,7 @@
         <div class="minor-projects">
 
           <article class="minor" aria-labelledby="p-delivgo" data-reveal>
+            <span class="minor-num" aria-hidden="true">04</span>
             <p class="project-kicker">Mobile</p>
             <h4 class="minor-title" id="p-delivgo">DelivGo</h4>
             <p>Application mobile de suivi de livraisons en temps réel avec API REST, messagerie instantanée et gestion des rôles contrôleur/livreur.</p>
@@ -263,15 +263,17 @@
           </article>
 
           <article class="minor" aria-labelledby="p-edukini" data-reveal>
+            <span class="minor-num" aria-hidden="true">05</span>
             <p class="project-kicker">Web · IA</p>
             <h4 class="minor-title" id="p-edukini">EDUKINI</h4>
-            <p>Plateforme qui accompagne les étudiants tunisiens dans leur orientation vers les écoles d'ingénieurs. Après le concours, elle estime leurs chances d'admission par filière&nbsp;; en première année, un service d'IA leur recommande la spécialité la plus adaptée à leur profil et à leurs notes. Un espace administrateur permet de gérer les écoles, les filières, les annonces et les statistiques.</p>
+            <p>Plateforme d'orientation vers les écoles d'ingénieurs : estimation des chances d'admission par filière et recommandation de spécialité par IA.</p>
             <ul class="tags" aria-label="Technologies utilisées">
               <li>Angular</li><li>Spring Boot</li>
             </ul>
           </article>
 
           <article class="minor" aria-labelledby="p-smartstudy" data-reveal>
+            <span class="minor-num" aria-hidden="true">06</span>
             <p class="project-kicker">Application</p>
             <h4 class="minor-title" id="p-smartstudy">SmartStudy</h4>
             <p>Application générant flashcards, résumés et planning de révision personnalisé.</p>

@@ -502,30 +502,16 @@ main:focus { outline: none; }
   color: var(--muted);
 }
 
-/* ---------- Projets phares : texte à gauche, étapes à droite ---------- */
+/* ---------- Projets phares : nom à gauche, description à droite ---------- */
 .project {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  gap: clamp(1rem, 5vw, 4rem);
   align-items: start;
-  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  padding-block: clamp(2rem, 4vw, 3rem);
   border-top: 1px solid var(--line);
 }
 .project:first-of-type { border-top: 0; padding-top: 0; }
-.project-body .tags { margin-top: 1.5rem; }
-
-/* Colonne des étapes, séparée par un filet vertical */
-.project-steps {
-  padding-left: clamp(1.5rem, 3vw, 2.5rem);
-  border-left: 1px solid var(--line);
-}
-.steps-label {
-  margin-bottom: 1rem;
-  font: 500 .75rem/1 var(--font-mono);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 
 .project-kicker {
   font: 500 .75rem/1.4 var(--font-mono);
@@ -539,88 +525,24 @@ main:focus { outline: none; }
   letter-spacing: -0.02em;
 }
 .project-lede {
-  margin-top: .6rem;
-  font-size: 1.075rem;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--text);
 }
-
-/* Pipeline : étapes numérotées reliées par un filet vertical */
-.pipeline {
-  position: relative;
-  margin: 0;
-  list-style: none;
-  counter-reset: step;
-}
-.pipeline::before {
-  content: "";
-  position: absolute;
-  left: .95rem; top: .9rem; bottom: .9rem;
-  width: 1px;
-  background: var(--line);
-}
-.pipeline li {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.9rem minmax(0, 1fr);
-  gap: .9rem;
-  align-items: center; /* texte centré sur la pastille numérotée */
-  padding-block: .4rem;
+.project-detail {
+  max-width: 42rem;
+  margin-top: .6rem;
   color: var(--muted);
-  font-size: .975rem;
-  line-height: 1.55;
-  counter-increment: step;
 }
-.pipeline li::before {
-  content: counter(step, decimal-leading-zero);
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 1.9rem; height: 1.9rem;
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-  background: var(--bg);
-  color: var(--accent);
-  font: 500 .7rem/1 var(--font-mono);
-}
-
 /* Mention complémentaire sous la description (ex. projet de stage) */
 .project-note {
-  margin-top: .5rem;
+  margin-top: .6rem;
   color: var(--muted);
-  font-size: .95rem;
+  font-size: .925rem;
+  font-style: italic;
 }
-
-.project-links { margin-top: 1.5rem; }
-
-/* ---------- Emplacements de captures d'écran ---------- */
-.shot {
-  margin: 0;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface-2);
-}
-.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.shot--todo {
-  display: grid;
-  place-items: center;
-  border-style: dashed;
-  border-color: color-mix(in srgb, var(--todo) 55%, var(--line));
-  background:
-    repeating-linear-gradient(135deg, transparent 0 11px, color-mix(in srgb, var(--line) 70%, transparent) 11px 12px),
-    var(--surface-2);
-}
-.shot--todo figcaption {
-  padding: .6rem 1rem;
-  background: var(--bg);
-  border-radius: 4px;
-  text-align: center;
-  font: 400 .8rem/1.5 var(--font-mono);
-  color: var(--muted);
-}
-.shot--todo strong { color: var(--todo); font-weight: 500; }
-.shot--small { aspect-ratio: 16 / 9; margin-bottom: 1.25rem; }
+.project-body .tags { margin-top: 1.25rem; }
+.project-links { margin-top: 1.25rem; }
 
 .minor-link { margin-top: .75rem; }
 
@@ -915,9 +837,7 @@ main:focus { outline: none; }
   .hero-aside { max-width: 34rem; }
 
   .project { grid-template-columns: minmax(0, 1fr); }
-  /* Sur une colonne, les étapes passent sous le texte, sans filet */
-  .project { gap: 2rem; }
-  .project-steps { padding-left: 0; border-left: 0; }
+  .project { gap: 1rem; }
 
   .minor-projects { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .minor { padding-block: 2rem; border-top: 1px solid var(--line); }

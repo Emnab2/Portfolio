@@ -502,18 +502,30 @@ main:focus { outline: none; }
   color: var(--muted);
 }
 
-/* ---------- Projets phares ---------- */
+/* ---------- Projets phares : texte à gauche, étapes à droite ---------- */
 .project {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
   padding-block: clamp(2.5rem, 5vw, 3.5rem);
   border-top: 1px solid var(--line);
 }
 .project:first-of-type { border-top: 0; padding-top: 0; }
-/* Alternance image à gauche / à droite */
-.project--reverse .project-media { order: 2; }
+.project-body .tags { margin-top: 1.5rem; }
+
+/* Colonne des étapes, séparée par un filet vertical */
+.project-steps {
+  padding-left: clamp(1.5rem, 3vw, 2.5rem);
+  border-left: 1px solid var(--line);
+}
+.steps-label {
+  margin-bottom: 1rem;
+  font: 500 .75rem/1 var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 
 .project-kicker {
   font: 500 .75rem/1.4 var(--font-mono);
@@ -535,7 +547,7 @@ main:focus { outline: none; }
 /* Pipeline : étapes numérotées reliées par un filet vertical */
 .pipeline {
   position: relative;
-  margin: 1.75rem 0;
+  margin: 0;
   list-style: none;
   counter-reset: step;
 }
@@ -609,77 +621,6 @@ main:focus { outline: none; }
 }
 .shot--todo strong { color: var(--todo); font-weight: 500; }
 .shot--small { aspect-ratio: 16 / 9; margin-bottom: 1.25rem; }
-
-/* ---------- Visuel de présentation (quand il n'y a pas de capture d'écran) ----------
-   Nom du projet en grand + étapes du pipeline, sur la trame de points de l'accueil. */
-.visual {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: .9rem;
-  margin: 0;
-  aspect-ratio: 16 / 10;
-  padding: clamp(1.25rem, 4vw, 2.5rem);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background:
-    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--text) 12%, transparent) 1px, transparent 0) 0 0 / 22px 22px,
-    var(--surface);
-}
-/* Filet d'accent vertical, rappel de l'encadré « En bref » */
-.visual::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 18%; bottom: 18%;
-  width: 3px;
-  background: var(--accent);
-}
-.visual-kicker {
-  font: 500 .72rem/1 var(--font-mono);
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.visual-name {
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 450;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  font-variation-settings: "opsz" 144;
-}
-.visual-flow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .6rem 1.6rem;
-  margin-top: .4rem;
-  list-style: none;
-}
-.visual-flow li {
-  position: relative;
-  padding: .3rem .6rem;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--bg);
-  font: 400 .78rem/1.4 var(--font-mono);
-  color: var(--text);
-  white-space: nowrap;
-}
-/* Flèche entre deux étapes (placée après l'étape : jamais seule en début de ligne) */
-.visual-flow li:not(:last-child)::after {
-  content: "→";
-  position: absolute;
-  right: -1.2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--accent);
-}
-.visual--small { aspect-ratio: 16 / 9; margin-bottom: .5rem; gap: .7rem; padding: 1.25rem 1.5rem; }
-.visual--small .visual-name { font-size: clamp(1.7rem, 3vw, 2.1rem); }
-.visual--small .visual-flow { gap: .5rem 1.5rem; }
-.visual--small .visual-flow li { font-size: .72rem; }
 
 .minor-link { margin-top: .75rem; }
 
@@ -973,16 +914,15 @@ main:focus { outline: none; }
   .hero-grid { grid-template-columns: minmax(0, 1fr); align-items: start; }
   .hero-aside { max-width: 34rem; }
 
-  .project,
-  .project--reverse { grid-template-columns: minmax(0, 1fr); }
-  .project--reverse .project-media { order: 0; }
+  .project { grid-template-columns: minmax(0, 1fr); }
+  /* Sur une colonne, les étapes passent sous le texte, sans filet */
+  .project { gap: 2rem; }
+  .project-steps { padding-left: 0; border-left: 0; }
 
   .minor-projects { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .minor { padding-block: 2rem; border-top: 1px solid var(--line); }
   .minor:first-child { border-top: 0; padding-top: 0; }
   .minor + .minor::before { content: none; }
-  /* Sur une colonne, image et texte côte à côte sur tablette */
-  .minor .shot { max-width: 28rem; }
 
   .trio { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .trio-col:first-child { grid-column: 1 / -1; }
@@ -1022,7 +962,7 @@ main:focus { outline: none; }
 
 /* --- Impression : version lisible sans couleurs de fond --- */
 @media print {
-  .site-header, .skip-link, .hero-actions, .email-actions, .shot--todo { display: none !important; }
+  .site-header, .skip-link, .hero-actions, .email-actions { display: none !important; }
   .section, .section--contact { background: none; padding-block: 1.5rem; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
 }

@@ -186,8 +186,7 @@
 
     <!-- =====================================================================
          01 — PROJETS
-         Visuels de présentation remplaçables par des captures d'écran
-         (voir README.md).
+         Projets phares : texte à gauche, étapes à droite. Autres projets en colonnes.
          ===================================================================== -->
     <section class="section" id="projets" aria-labelledby="projets-title">
       <div class="container">
@@ -199,25 +198,10 @@
 
         <!-- ----- Projet phare 1 : LabClear ----- -->
         <article class="project" aria-labelledby="p-labclear" data-reveal>
-          <div class="project-media">
-            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
-            <figure class="visual" aria-hidden="true">
-              <p class="visual-kicker">Pipeline</p>
-              <p class="visual-name">LabClear</p>
-              <ol class="visual-flow"><li>PDF d'analyse</li><li>Structuration</li><li>Valeurs de référence</li><li>Explications RAG</li></ol>
-            </figure>
-          </div>
           <div class="project-body">
             <p class="project-kicker">IA générative · RAG</p>
             <h3 class="project-title" id="p-labclear">LabClear</h3>
             <p class="project-lede">Assistant IA pour les analyses de sang.</p>
-
-            <ol class="pipeline" aria-label="Pipeline de LabClear">
-              <li>Extraction des résultats d'un PDF d'analyse de sang</li>
-              <li>Structuration des données</li>
-              <li>Comparaison aux valeurs de référence</li>
-              <li>Explications sourcées par RAG, validées par un professionnel de santé</li>
-            </ol>
 
             <ul class="tags" aria-label="Technologies utilisées">
               <li>Python</li><li>pdfplumber</li><li>RAG</li><li>LLM</li><li>Flask</li>
@@ -227,55 +211,45 @@
               <a class="link" href="https://github.com/Emnab2/LabClear" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Voir le code sur GitHub<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>
             </div>
           </div>
+          <div class="project-steps">
+            <p class="steps-label">Pipeline</p>
+            <ol class="pipeline" aria-label="Pipeline de LabClear">
+              <li>Extraction des résultats d'un PDF d'analyse de sang</li>
+              <li>Structuration des données</li>
+              <li>Comparaison aux valeurs de référence</li>
+              <li>Explications sourcées par RAG, validées par un professionnel de santé</li>
+            </ol>
+          </div>
         </article>
 
         <!-- ----- Projet phare 2 : DocuMind ----- -->
-        <article class="project project--reverse" aria-labelledby="p-documind" data-reveal>
-          <div class="project-media">
-            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
-            <figure class="visual" aria-hidden="true">
-              <p class="visual-kicker">Pipeline</p>
-              <p class="visual-name">DocuMind</p>
-              <ol class="visual-flow"><li>Découpage</li><li>Recherche</li><li>Génération</li></ol>
-            </figure>
-          </div>
+        <article class="project" aria-labelledby="p-documind" data-reveal>
           <div class="project-body">
             <p class="project-kicker">IA générative · RAG</p>
             <h3 class="project-title" id="p-documind">DocuMind</h3>
             <p class="project-lede">Assistant IA de questions-réponses sur documents.</p>
 
+            <ul class="tags" aria-label="Technologies utilisées">
+              <li>Python</li><li>RAG</li><li>LLM</li>
+            </ul>
+          </div>
+          <div class="project-steps">
+            <p class="steps-label">Pipeline</p>
             <ol class="pipeline" aria-label="Pipeline de DocuMind">
               <li>Découpage des documents</li>
               <li>Recherche des passages pertinents</li>
               <li>Génération des réponses</li>
             </ol>
-
-            <ul class="tags" aria-label="Technologies utilisées">
-              <li>Python</li><li>RAG</li><li>LLM</li>
-            </ul>
           </div>
         </article>
 
         <!-- ----- Projet phare 3 : CreditWise ----- -->
         <article class="project" aria-labelledby="p-creditwise" data-reveal>
-          <div class="project-media">
-            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
-            <figure class="visual" aria-hidden="true">
-              <p class="visual-kicker">Pipeline</p>
-              <p class="visual-name">CreditWise</p>
-              <ol class="visual-flow"><li>Données clients</li><li>Modèles ML</li><li>Explications SHAP</li></ol>
-            </figure>
-          </div>
           <div class="project-body">
             <p class="project-kicker">Machine learning · IA explicable · Stage ITGust</p>
             <h3 class="project-title" id="p-creditwise">CreditWise</h3>
             <p class="project-lede">Plateforme intelligente d'aide à la décision d'octroi de crédit, réalisée pendant mon stage chez ITGust.</p>
             <p class="project-note">Projet de stage chez ITGust</p>
-
-            <ol class="pipeline" aria-label="Démarche de CreditWise">
-              <li>Comparaison de modèles de machine learning sur des données clients</li>
-              <li>Explication des décisions avec SHAP (IA explicable)</li>
-            </ol>
 
             <ul class="tags" aria-label="Technologies utilisées">
               <li>Python</li><li>Scikit-learn</li><li>Pandas</li><li>SHAP</li><li>Flask</li><li>SQLite</li>
@@ -285,6 +259,13 @@
               <a class="link" href="https://github.com/Emnab2/CreditWise" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Voir le code sur GitHub<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>
             </div>
           </div>
+          <div class="project-steps">
+            <p class="steps-label">Démarche</p>
+            <ol class="pipeline" aria-label="Démarche de CreditWise">
+              <li>Comparaison de modèles de machine learning sur des données clients</li>
+              <li>Explication des décisions avec SHAP (IA explicable)</li>
+            </ol>
+          </div>
         </article>
 
         <!-- ----- Autres projets (format compact) ----- -->
@@ -292,12 +273,6 @@
         <div class="minor-projects">
 
           <article class="minor" aria-labelledby="p-delivgo" data-reveal>
-            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
-            <figure class="visual visual--small" aria-hidden="true">
-              <p class="visual-kicker">Architecture</p>
-              <p class="visual-name">DelivGo</p>
-              <ol class="visual-flow"><li>Android</li><li>API REST</li><li>MySQL</li></ol>
-            </figure>
             <p class="project-kicker">Mobile</p>
             <h4 class="minor-title" id="p-delivgo">DelivGo</h4>
             <p>Application mobile de suivi de livraisons en temps réel avec API REST, messagerie instantanée et gestion des rôles contrôleur/livreur.</p>
@@ -308,12 +283,6 @@
           </article>
 
           <article class="minor" aria-labelledby="p-edukini" data-reveal>
-            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
-            <figure class="visual visual--small" aria-hidden="true">
-              <p class="visual-kicker">Architecture</p>
-              <p class="visual-name">EDUKINI</p>
-              <ol class="visual-flow"><li>Angular</li><li>Spring Boot</li></ol>
-            </figure>
             <p class="project-kicker">Web</p>
             <h4 class="minor-title" id="p-edukini">EDUKINI</h4>
             <p>Plateforme intelligente d'aide à l'orientation des étudiants.</p>
@@ -323,12 +292,6 @@
           </article>
 
           <article class="minor" aria-labelledby="p-smartstudy" data-reveal>
-            <!-- Visuel de présentation (remplaçable par une capture : voir README) -->
-            <figure class="visual visual--small" aria-hidden="true">
-              <p class="visual-kicker">Fonctionnalités</p>
-              <p class="visual-name">SmartStudy</p>
-              <ol class="visual-flow"><li>Flashcards</li><li>Résumés</li><li>Planning</li></ol>
-            </figure>
             <p class="project-kicker">Application</p>
             <h4 class="minor-title" id="p-smartstudy">SmartStudy</h4>
             <p>Application générant flashcards, résumés et planning de révision personnalisé.</p>

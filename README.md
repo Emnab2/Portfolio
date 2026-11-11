@@ -35,21 +35,11 @@ Tout le texte est dans **`index.html`**, découpé en sections commentées :
 `05 — CERTIFICATIONS`, `06 — ENGAGEMENT`, `07 — CONTACT`.
 Cherchez le titre de la section (Ctrl+F) et modifiez le texte entre les balises.
 
-### Remplacer un visuel de projet par une capture d'écran
+### Ajouter une capture d'écran à un projet (plus tard)
 
-Chaque projet affiche pour l'instant un visuel sobre (nom + pipeline), bloc
-`<figure class="visual" …>`. Pour mettre une vraie capture :
-
-1. Enregistrez l'image dans `assets/projets/` (ex. `labclear.png`, idéalement 1600 × 1000 px,
-   moins de 300 Ko ; convertir en WebP ou JPG si besoin).
-2. Remplacez le bloc `<figure class="visual" …>…</figure>` du projet par :
-   ```html
-   <figure class="shot">
-     <img src="assets/projets/labclear.png" alt="Capture d'écran de LabClear : tableau des résultats d'analyse" width="1600" height="1000" loading="lazy">
-   </figure>
-   ```
-   Le texte `alt` doit décrire ce que montre l'image. Pour les « Autres projets »,
-   utilisez `<figure class="shot shot--small">`.
+Les projets sont présentés en texte seul (description et technologies à gauche, étapes à droite).
+Pour ajouter une capture, enregistrez-la dans `assets/projets/` (moins de 300 Ko) et
+demandez son intégration : un emplacement image sera ajouté au projet concerné.
 
 ### Ajouter un lien GitHub de projet
 

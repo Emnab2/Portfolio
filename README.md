@@ -50,7 +50,7 @@ Dans le projet, sous les étiquettes, ajoutez :
 </div>
 ```
 (pour les « Autres projets », remplacez `<div class="project-links">` par `<p class="minor-link">`).
-Liens actuels : LabClear, CreditWise, DelivGo. DocuMind, EDUKINI et SmartStudy n'ont pas de dépôt public.
+Liens actuels : LabClear, DocuMind (dépôt rag-faq-chatbot), CreditWise, DelivGo. EDUKINI et SmartStudy n'ont pas de dépôt public.
 
 ### Ajouter un lien LinkedIn plus tard
 
